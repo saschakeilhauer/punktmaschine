@@ -77,11 +77,10 @@ const App = (()=>{
         setMode(b.dataset.mode);
       }
     });
-    setMode(localStorage.getItem('pm-mode')||'auto');
+    setMode('light');     //(localStorage.getItem('pm-mode')||'auto');
   }
 
-  function setMode(mode){
-    localStorage.setItem('pm-mode', mode);
+  function setMode(mode){localStorage.setItem('pm-mode', mode);
     const eff = (mode==='auto')
       ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
       : mode;
