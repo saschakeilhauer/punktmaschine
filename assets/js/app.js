@@ -81,7 +81,7 @@ const App = (()=>{
   }
 
   function setMode(mode){localStorage.setItem('pm-mode', mode);
-    const eff = (mode==='auto')
+    const eff = (mode==='light')
       ? (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
       : mode;
     document.documentElement.setAttribute('data-theme', eff);
