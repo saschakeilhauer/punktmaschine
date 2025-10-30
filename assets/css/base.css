@@ -1,0 +1,34 @@
+:root{
+  --bg:#0b0c10;--ink:#e9edf1;--muted:#a8b3bf;--card:#121418;--border:#1f2937;
+  --accent:#2563eb;--ok:#22c55e;--warn:#f59e0b;--bad:#ef4444;
+  --radius:16px;--pad:16px;--font:16px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+html[data-theme="light"]{--bg:#f8fafc;--ink:#0b1220;--muted:#4b5563;--card:#ffffff;--border:#e5e7eb}
+*{box-sizing:border-box} body{margin:0;font:var(--font);background:var(--bg);color:var(--ink)}
+.wrap{max-width:900px;margin:0 auto;padding:12px}
+.topbar,.footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--card)}
+.logo{width:28px;height:28px;border-radius:8px}
+.appname{font-weight:700;margin-left:6px}
+.crumb{margin-left:10px;color:var(--muted)}
+.mode button{border:1px solid var(--border);background:transparent;padding:4px 8px;border-radius:10px;cursor:pointer}
+.mode button.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.footer{margin-top:16px}
+.muted{color:var(--muted);font-size:12px}
+.content{margin-top:12px}
+.screen{display:none}
+.screen.active{display:block}
+h1,h2,h3{margin:.3em 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px;margin:12px 0}
+.tile{border:1px solid var(--border);border-radius:14px;padding:16px;background:var(--card);cursor:pointer}
+.tile strong{display:block;font-size:18px}
+.tile span{display:block;color:var(--muted);margin-top:4px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:var(--pad);margin-top:10px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+.btn{border:1px solid var(--border);padding:10px 14px;border-radius:12px;background:transparent;cursor:pointer}
+.btn.link{background:transparent;border-color:transparent;text-decoration:underline;padding:6px}
+.btn.danger{background:var(--bad);color:#fff;border-color:var(--bad)}
+.steps-list{margin:0 0 0 18px}
+.checks label{display:flex;align-items:center;gap:8px;margin:8px 0}
+.status{margin-top:8px;padding:8px 12px;border:1px solid var(--border);border-radius:12px}
+.status.ok{background:var(--ok);color:#fff;border-color:var(--ok)}
+@media (pointer:coarse){ .tile{padding:20px} .btn{padding:14px 16px} }

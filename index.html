@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="de" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Punktmaschine – Operator</title>
+  <link rel="manifest" href="pwa/manifest.json">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="icon" href="assets/img/icon-192.png">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <script defer src="assets/js/include.js"></script>
+  <script defer src="assets/js/routes.js"></script>
+  <script defer src="assets/js/app.js"></script>
+</head>
+<body>
+  <div class="wrap">
+    <div data-include="partials/header.html"></div>
+
+    <main id="view" class="content">
+      <!-- Home: Auswahl, was wird gepunktet -->
+      <section id="screen-home" class="screen active">
+        <h1>Was wird gepunktet?</h1>
+        <div id="grid" class="grid"></div>
+      </section>
+
+      <!-- Setup: Schritte + Checkliste für gewählte Option -->
+      <section id="screen-setup" class="screen">
+        <button class="btn link" data-nav="home">← Start</button>
+        <h2 id="setupTitle">Einstellung</h2>
+
+        <div class="card steps">
+          <ol id="stepList" class="steps-list"></ol>
+        </div>
+
+        <div class="card checks">
+          <h3>Checkliste (Pflicht)</h3>
+          <label><input type="checkbox" data-check="werkzeug"> Werkzeug korrekt eingebaut (Konus sitzt)</label>
+          <label><input type="checkbox" data-check="elektroden"> Elektroden Kontaktflächen gereinigt</label>
+          <label><input type="checkbox" data-check="kuehlung"> Wasserkühlung eingeschaltet</label>
+          <label><input type="checkbox" data-check="sortierer"> Sortiergerät eingeschaltet & quittiert</label>
+          <label><input type="checkbox" data-check="generator"> Schweißgenerator EIN</label>
+          <label><input type="checkbox" data-check="luft"> Luftabsperrhahn geöffnet</label>
+          <div class="status" id="status">Status: unvollständig</div>
+        </div>
+
+        <div class="row">
+          <button class="btn" id="btnBack">Zurück</button>
+          <button class="btn" id="btnPrint">Kurz-Anleitung drucken</button>
+          <button class="btn danger" id="btnReset">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      addEventListener('load', ()=>navigator.serviceWorker.register('pwa/service-worker.js').catch(()=>{}));
+    }
+  </script>
+</body>
+</html>

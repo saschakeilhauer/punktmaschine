@@ -1,0 +1,56 @@
+[
+  {
+    "key": "m4",
+    "label": "Mutter M4",
+    "nr": 34,
+    "druck": 5.0
+  },
+  {
+    "key": "m5",
+    "label": "Mutter M5",
+    "nr": 35,
+    "druck": 5.2
+  },
+  {
+    "key": "m6",
+    "label": "Mutter M6",
+    "nr": 36,
+    "druck": 5.5
+  },
+  {
+    "key": "m8",
+    "label": "Mutter M8",
+    "nr": 38,
+    "druck": 5.8
+  },
+  {
+    "key": "m10",
+    "label": "Mutter M10",
+    "nr": 310,
+    "druck": 6.0
+  },
+  {
+    "key": "m12",
+    "label": "Mutter M12",
+    "nr": 312,
+    "druck": 6.2
+  },
+  {
+    "key": "aubi",
+    "label": "Aubi Scherenarm",
+    "nr": 40,
+    "druck": null
+  },
+  {
+    "key": "hoermann",
+    "label": "Hörmann Bolzen",
+    "nr": 41,
+    "druck": null
+  },
+  {
+    "key": "lochgitter_duenn",
+    "label": "Lochgitter dünn",
+    "nr": "42 / 36",
+    "druck": null
+  }
+]
