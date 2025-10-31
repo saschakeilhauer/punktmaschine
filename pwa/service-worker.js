@@ -1,4 +1,4 @@
-const CACHE='pm-op-v1';
+const CACHE='pm-op-v1.1';
 const ASSETS=[
   '/','/index.html',
   '/partials/header.html','/partials/footer.html',
