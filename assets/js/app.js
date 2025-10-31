@@ -24,7 +24,7 @@ const App = (()=>{
     const druck = (p.druck===null || p.druck===undefined) ? '—' : p.druck+' bar';
     return [
       'F4 → Menü',
-      'F2 → PIN = 3',
+      'F2 → PIN = 3 → orangene Taste',
       'F4 → Tafel 45',
       `Programmnummer = ${p.nr}`,
       `Luftdruck Soll = ${druck}`
